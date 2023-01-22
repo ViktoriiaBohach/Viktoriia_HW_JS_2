@@ -10,34 +10,34 @@
     (Змінні типу інтеджер містять кількість продуктів в наявності у вигляді вхідних даних)
     */
 
-// 1st case
-// let hamburgers = 4;
-// let fries = 1;
+//1st case
+let hamburgers = 4;
+let fries = 1;
 
-// if((hamburgers >= 4 && fries >= 1)){ // всім вистачає гамбургерів і картоплі
-//     console.log("Ми поїли")
-// }
+if((hamburgers >= 4 && fries >= 1)){ // всім вистачає гамбургерів і картоплі
+    console.log("Ми поїли")
+}
 
-// let hamburgers1 = 3;
-// let fries1 = 1;
+let hamburgers1 = 3;
+let fries1 = 1;
 
-// if((hamburgers1 <= 4 && fries >= 1)){ // вcім не вистачає гамбургерів, але вистачає картоплі
-//     console.log("Ми йдемо в інше кафе")
-// }  
+if((hamburgers1 <= 4 && fries >= 1)){ // вcім не вистачає гамбургерів, але вистачає картоплі
+    console.log("Ми йдемо в інше кафе")
+}  
 
-// let hamburgers2 = 4;
-// let fries2 = 0;
+let hamburgers2 = 4;
+let fries2 = 0;
 
-// if((hamburgers >= 4 && fries2 <= 1)){// вcім вистачає гамбургерів, але не вистачає картоплі
-//     console.log("Ми йдемо в інше кафе")
-// } 
+if((hamburgers >= 4 && fries2 <= 1)){// вcім вистачає гамбургерів, але не вистачає картоплі
+    console.log("Ми йдемо в інше кафе")
+} 
 
-// let hamburgers3 = 3;
-// let fries3 = 0;
+let hamburgers3 = 3;
+let fries3 = 0;
 
-// if((hamburgers3 <= 4 && fries3 <= 1)){ // вcім не вистачає ні гамбургерів, ні картоплі
-//     console.log("Ми йдемо в інше кафе")
-// } 
+if((hamburgers3 <= 4 && fries3 <= 1)){ // вcім не вистачає ні гамбургерів, ні картоплі
+    console.log("Ми йдемо в інше кафе")
+} 
 
 // 2nd case
 let hamburgers4 = 4;
@@ -134,7 +134,6 @@ else {
             break; 
     }
 
-
     /*
 5.  Задано 3 числа (a, b, c), які не рівні між собою.
     Визначити середнє мід цими трьома числами
@@ -191,21 +190,25 @@ else {
     Математичні операції для обчислення: "+", "-", "*", "/".
     Результат виводити в консоль.*/
 
-    let number1 = '49';
-    let number2 = '50';
+    let mathOperation = '/';
+    let d = 6;
+    let e = 3;
 
-    switch(number){
-        case '49':
-            console.log('49')
+    switch(mathOperation){
+        case '+':
+            console.log(d+e)
             break;
-        case '50': 
-            console.log('50')
+        case '-': 
+            console.log(d-e)
             break;
-        case '100':
-            console.log('100')
+        case '*':
+            console.log(d*e)
+            break;
+        case '/':
+            console.log(d/e)
             break;
         default: 
-            console.log('This is default output')
+            console.log('This is not a math operation')
             break; 
     }
 
