@@ -55,10 +55,10 @@ else {
     Результат виводити в консоль.
     */
 
-    let productMinPrice = 1500;
+    let productMinPrice = 1000;
     let productMaxPrice = 1900;
     
-    if (productMinPrice >= 1500 && productMaxPrice <= 1900){ 
+    if (productMinPrice >= 1000 && productMaxPrice <= 1900){ 
         console.log('true')
     } 
     else {
@@ -71,10 +71,9 @@ else {
     Результат виводити в консоль.*/
 
     // 1st case
-   let productMinPrice1 = 900;
-    let productMaxPrice1 = 2000;
+   let price = 1000;
     
-    if (productMinPrice1 < 1000 && productMinPrice1 != 1000 && productMaxPrice1 > 1900 && productMaxPrice1 != 1900 ){ 
+    if (price < 1000 || price > 1900 ){ 
         console.log('true')
     } 
     else {
@@ -82,38 +81,18 @@ else {
     }
 
     // 2nd case
-    let productMinPrice2 = 800;
-    let productMaxPrice2 = 2100;
+    let price2 = 1100;
     
-    if (productMinPrice2 <= 1000 && productMaxPrice2 >= 1900){ 
-        console.log('true')
+    if (!(price2 < 1000 || price2 > 1900) ){ 
+        console.log('false')
     } 
     else {
-        console.log('false')
+        console.log('true')
     }
 /*
 4.  За номером пори року вивести назву цієї пори року використовуючи оператор if-else-if
     Результат виводити в консоль.*/
 
-// 1st case
-
-let numericSeason = 4;
-
-if(numericSeason == 1){
-    console.log('winter');
-}
- else if (numericSeason == 2){
-    console.log('spring');
-}
-else if (numericSeason == 3){
-    console.log('summer');
-}
-else {
-    console.log('autumn');
-}
- 
-
-// 2nd case
     let numberSeason = '1';
 
     switch(numberSeason){
@@ -141,19 +120,32 @@ else {
     Використати вкладені оператори if
     Результат виводити в консоль.*/
 
-    let a = 5;
-    let b = 2;
-    let c = 1;
+    let a = 20;
+    let b = 60;
+    let c = 30;
+    let average;
 
-    if(a<b){
-        console.log('the least value');
-    }
-     else if (b<c){
-        console.log('the greatest value');
-    }
-    else {
-        console.log('the middle value');
-    }
+    if(a>b){
+        if (a>c){ // a max
+           if (b>c)
+           console.log(avg = b)
+           else
+           console.log(avg = c)
+        }
+        if (a<c){ // c max
+            if (b<a)
+            console.log(avg = a)
+            else
+            console.log(avg = b)
+         }
+        }
+    else if(a<b) {
+            if (a>c) // b max
+               console.log(avg = a)
+               else
+               console.log(avg = c)
+            } 
+
      
     /*
 6.  Задано номер дня тижня.
@@ -227,29 +219,20 @@ console.log(result);
 
     Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)*/
 
-    let x = 1;
-    let y = 2;
-    let z = 5;
-    let f = 'метр';
-    let g = 'метри';
-    let h = 'метрів';
-    let i = 'кілометр';
-    let j = 'кілометри';
-    let k = 'кілометрів';
-    let result2 = x/1000;
-    let result3 = y/1000;
-    let result4 = z/1000;
+    
+    let x = 1000;
 
-    if ('x + " " f'){
-    console.log(x + ' ' + f + ' це ' + result2 + ' ' + i)
+    if (x===1){
+    console.log(x + ' метр' + ' це ' + x/1000 + ' кілометр');
     };
-    if ('y + " " g'){
-        console.log(y + ' ' + g + ' це ' + result3 + ' ' + j);
-        }
-    if ('z + " " h'){
-            console.log(z + ' ' + h + ' це ' + result4 + ' ' + k);
+    if (x>=2 && x<=4){
+            console.log(x + ' метри' + ' це ' + x/1000 + ' кілометра');
             }
-            else {
-                console.log('no operation result is present');
-            }
+    if (x>=5 && x<=100){
+                    console.log(x + ' метрів' + ' це ' + x/1000 + ' кілометрів');
+                 }
+    else if (x===1000||2000||3000||4000||5000||6000||7000||8000||9000){
+                console.log(x + ' метрів' + ' це ' + x/1000 + ' кілометр');      
+                }
+            
 

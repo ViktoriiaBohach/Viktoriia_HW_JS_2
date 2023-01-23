@@ -10,8 +10,8 @@
     (Змінні типу інтеджер містять кількість продуктів в наявності у вигляді вхідних даних)
     */
    
-    function checkMenu(hamburg, fri) {
-        if (hamburg >= 4 && fri >= 1) {
+    function checkMenu(hamburgers, fri) {
+        if (hamburgers >= 4 && fri >= 1) {
             console.log('Ми поїли');
         }
         else {
@@ -42,9 +42,8 @@
     Результат виводити в консоль.*/
 
     // 1st case
-
-    function checkPrice1(minPrice1, maxPrice1) {
-        if (minPrice1 < 1000 && minPrice1 != 1000 && maxPrice1 > 1900 && maxPrice1 != 1900 ) {
+    function checkPrice(price) {
+        if (price < 1000 || price > 1900){ 
             console.log('true');
         }
         else {
@@ -52,21 +51,19 @@
           return; 
         }
       }
-      checkPrice1(900,2000);
-
+      checkPrice(2000);
 
     // 2nd case
-    function checkPrice2(minPrice2, maxPrice2) {
-        if (minPrice2 <= 1000  && maxPrice2 >= 1900 ) {
-            console.log('true');
+    function price2(price2) {
+        if (!(price2 < 1000 || price2 > 1900)){ 
+            console.log('false');
         }
         else {
-            console.log('false');
+            console.log('true');
           return; 
         }
       }
-      checkPrice2(800,2100);
-
+      price2(800);
 /*
 4.  За номером пори року вивести назву цієї пори року використовуючи оператор if-else-if
     Результат виводити в консоль.*/
@@ -92,19 +89,31 @@ getSeasons(1);
     Використати вкладені оператори if
     Результат виводити в консоль.*/
 
-    function middleValue(minValue, middleValue, maxValue){
-        if(middleValue < minValue && minValue< maxValue || maxValue < minValue && minValue < middleValue){
-            console.log('the least value');
-        }
-         else if (minValue<maxValue && maxValue>middleValue || middleValue<maxValue && maxValue>minValue){
-            console.log('the greatest value');
-        }
-        else { //if(minValue < middleValue && middle< maxValue || maxValue < middleValue && middleValue < minValue)
-            console.log('the middle value');
+    function avgValue(a,b,c){
+        if(a>b){
+            if (a>c){ // a max
+               if (b>c)
+               console.log(b)
+               else
+               console.log(c)
+            }
+            if (a<c){ // c max
+                if (b<a)
+                console.log(a)
+                else
+                console.log(b)
+             }
+            }
+        else if(a<b) {
+                if (a>c) // b max
+                   console.log(a)
+                   else
+                   console.log(c)
+                } 
             return;
         }
-    }
-          middleValue(8,6,4);
+        avgValue(40, 20, 60);
+
      
     /*
 6.  Задано номер дня тижня.
@@ -178,21 +187,19 @@ function replaceAll(string, search, replaceWith) {
 
     Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)*/
 
-    let f = 'метр';
-    let g = 'метри';
-    let h = 'метрів';
-    let i = 'кілометр';
-    let j = 'кілометри';
-    let k = 'кілометрів';    
+   
           function ConverseMeterKilometer (x){
-            if(x === 1){
-                console.log(x + ' ' + f + ' це ' + x/1000 + ' ' + i);  
+        if(x===1){
+                console.log(x + ' метр' + ' це ' + x/1000 + ' кілометр');
           }
-          else if (x>=2 && x<=4){
-            console.log(x + ' ' + g + ' це ' + x/1000 + ' ' + j);  
-      }
-      else {
-        console.log(x + ' ' + h + ' це ' + x/1000 + ' ' + k);  
-  }
+        if (x>=2 && x<=4){
+            console.log(x + ' метри' + ' це ' + x/1000 + ' кілометра');  
+        }
+        if (x>=5 && x<=100){
+        console.log(x + ' метрів' + ' це ' + x/1000 + ' кілометрів');
+        }
+        if (x===1000||2000||3000||4000||5000||6000||7000||8000||9000){
+        console.log(x + ' метрів' + ' це ' + x/1000 + ' кілометр');      
+         }
 }
-    ConverseMeterKilometer (4);
+    ConverseMeterKilometer (1000);
